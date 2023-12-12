@@ -13,7 +13,7 @@ class DemoController(
 
     private val logger = KotlinLogging.logger {}
 
-    @GetMapping("/test")
+    @GetMapping("/rest/v1/demo-controller")
     suspend fun test(): DemoObject {
         logger.info { "test contoller called" }
         return demoService()

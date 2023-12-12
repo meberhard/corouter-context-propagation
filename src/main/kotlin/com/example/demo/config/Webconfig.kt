@@ -6,6 +6,7 @@ import io.micrometer.observation.ObservationRegistry
 import io.micrometer.observation.contextpropagation.ObservationThreadLocalAccessor
 import io.micrometer.tracing.Tracer
 import io.micrometer.tracing.contextpropagation.ObservationAwareSpanThreadLocalAccessor
+import jakarta.annotation.PostConstruct
 import kotlinx.coroutines.withContext
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -14,7 +15,6 @@ import org.springframework.web.server.CoWebFilterChain
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import reactor.netty.Metrics
-import javax.annotation.PostConstruct
 
 @Configuration
 class WebConfig(

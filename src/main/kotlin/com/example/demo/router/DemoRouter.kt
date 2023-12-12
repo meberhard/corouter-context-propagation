@@ -14,7 +14,7 @@ class DemoRouter(
     fun demoRoutes() = coRouter {
         "/rest".nest {
             "v1".nest {
-                "/demo".nest {
+                "/demo-router".nest {
                     GET("", demoHandler::demoCall)
                 }
             }
